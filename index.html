@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Calculator</h1>
+    <form>
+      <input
+        type="number"
+        id="number1"
+        placeholder="Enter first number"
+        onchange=""
+      />
+      <br />
+      <br />
+      <input
+        type="number"
+        id="number2"
+        placeholder="Enter second number"
+        onchange=""
+      />
+      <br />
+      <br />
+    </form>
+    <button type="button" onclick="sumNumbers()">+</button>
+    <button type="button" onclick="musNumbers()">-</button>
+    <button type="button" onclick="mulNumbers()">*</button>
+    <button type="button" onclick="divNumbers()">/</button>
+
+    <h3>TOTAL: <span id="total"></span></h3>
+
+    <script>
+      function sumNumbers() {
+        let inputNumber1 = Number(document.getElementById("number1").value);
+        let inputNumber2 = Number(document.getElementById("number2").value);
+        let sum = inputNumber1 + inputNumber2;
+        document.getElementById("total").innerHTML = sum;
+      }
+
+      function musNumbers() {
+        let inputNumber1 = Number(document.getElementById("number1").value);
+        let inputNumber2 = Number(document.getElementById("number2").value);
+        let munus = inputNumber1 - inputNumber2;
+        document.getElementById("total").innerHTML = munus;
+      }
+
+      function mulNumbers() {
+        let inputNumber1 = Number(document.getElementById("number1").value);
+        let inputNumber2 = Number(document.getElementById("number2").value);
+        let multiple = inputNumber1 * inputNumber2;
+        document.getElementById("total").innerHTML = multiple;
+      }
+
+      function divNumbers() {
+        let inputNumber1 = Number(document.getElementById("number1").value);
+        let inputNumber2 = Number(document.getElementById("number2").value);
+        let divide = inputNumber1 / inputNumber2;
+        document.getElementById("total").innerHTML = divide;
+      }
+    </script>
+  </body>
+</html>
